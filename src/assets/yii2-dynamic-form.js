@@ -86,9 +86,9 @@
         });
 
         // remove "error/success" css class
-        var yiiActiveFormData = $('#' + widgetOptions.formId).yiiActiveForm('data');
-        $template.find('.' + yiiActiveFormData.settings.errorCssClass).removeClass(yiiActiveFormData.settings.errorCssClass);
-        $template.find('.' + yiiActiveFormData.settings.successCssClass).removeClass(yiiActiveFormData.settings.successCssClass);
+//         var yiiActiveFormData = $('#' + widgetOptions.formId).yiiActiveForm('data');
+//         $template.find('.' + yiiActiveFormData.settings.errorCssClass).removeClass(yiiActiveFormData.settings.errorCssClass);
+//         $template.find('.' + yiiActiveFormData.settings.successCssClass).removeClass(yiiActiveFormData.settings.successCssClass);
 
         return $template;
     };
@@ -115,7 +115,7 @@
         var count = _count($elem, widgetOptions);
 
         if (count < widgetOptions.limit) {
-            $toclone = widgetOptions.template;
+            $toclone = $(widgetOptions.template);
             $newclone = $toclone.clone(false, false);
 
             if (widgetOptions.insertPosition === 'top') {
